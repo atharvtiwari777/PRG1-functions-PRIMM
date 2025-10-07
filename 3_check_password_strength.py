@@ -22,6 +22,11 @@ def check_password_strength(password):
     else:
         feedback.append("Password should contain numbers")
     
+    if any(password in "!@#$%^&*" for char in password):
+        score += 1
+    else:
+        feedback.append("Password should contain special characters")
+
     return score, feedback
 
 # Test passwords
