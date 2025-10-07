@@ -29,6 +29,10 @@ def analyse_scores(scores):
         "grade_distribution": grade_counts
     }
 
+def calculate_median(test_scores):
+    sorted_scores = sorted(test_scores)
+    median = sorted_scores[len(sorted_scores) // 2]
+
 # Test data
 test_scores = [85, 92, 78, 90, 87, 95, 82, 88, 91, 79]
 empty_list = []
